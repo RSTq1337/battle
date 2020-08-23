@@ -6,10 +6,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
+import java.util.*;
 
 @RestController
 @RequestMapping("/battle")
@@ -57,12 +54,12 @@ public class PersonController {
          List<Person> list = repo.findAll();
          Person first = null;
          Person second = null;
-         do {
+         do{
              Random r = new Random();
              first = list.get(r.nextInt(list.size()));
              Random m = new Random();
              second = list.get(m.nextInt(list.size()));
-         } while(first.equals(second));
+         }while(Objects.equals(first, second));
          List<Person> twoPersons = new ArrayList<>();
          twoPersons.add(first);
          twoPersons.add(second);
