@@ -86,7 +86,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>fully.qualified.MainClass</mainClass>
+							<mainClass>com.mog.rstq.norriv.summerProject.SummerProjectApplication</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
