@@ -1,1 +1,1 @@
-web java -Dserver.port=$PORT $JAVA_OPTS -jar target/summerProject-0.0.1-SNAPSHOT.jar --spring.data.mongodb.uri=$MONGOLAB_URI
+web java -Dserver.port=$PORT $JAVA_OPTS -jar target/summerProject-0.0.1-SNAPSHOT.jar --spring.data.mongodb.uri=mongodb+srv://youruser1337:postgres@cluster0.re0pt.mongodb.net/people?retryWrites=true&w=majority
