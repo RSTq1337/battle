@@ -1,2 +1,2 @@
-MONGODB_URI=mongodb+srv://youruser1337:postgres@cluster0.re0pt.mongodb.net/people?retryWrites=true&w=majority
+MONGODB_URI=mongodb://youruser1337:postgres@cluster0.re0pt.mongodb.net/people?retryWrites=true&w=majority
 --spring.data.mongodb.uri=$MONGOLAB_URI
