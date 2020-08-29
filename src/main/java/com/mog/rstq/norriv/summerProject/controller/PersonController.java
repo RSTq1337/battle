@@ -85,6 +85,6 @@ public class PersonController {
         List<Person> list = repo.findAll();
         Collections.sort(list);
         return list;
-        }
     }
 }
+
