@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Document
 @NoArgsConstructor
 @AllArgsConstructor
-public class Person {
+public class Person implements Comparable<Person> {
 
     @Id
     private String id;
@@ -20,4 +20,10 @@ public class Person {
     private String linkVk;
     private int score;
     private String fullName;
+
+
+    @Override
+    public int compareTo(Person person) {
+        return person.getScore() - this.getScore();
+    }
 }

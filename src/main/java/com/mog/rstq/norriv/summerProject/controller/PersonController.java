@@ -80,4 +80,11 @@ public class PersonController {
         buffer.ifPresent(repo::save);
     }
 
+    @GetMapping("/score")
+    private List<Person> score(){
+        List<Person> list = repo.findAll();
+        Collections.sort(list);
+        return list;
+        }
+    }
 }
