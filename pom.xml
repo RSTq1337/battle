@@ -45,11 +45,6 @@
 			<version>1.18.12</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.cloudinary</groupId>
-			<artifactId>cloudinary-http44</artifactId>
-			<version>1.26.0</version>
-		</dependency>
 	</dependencies>
 
 	<build>
