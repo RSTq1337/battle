@@ -84,7 +84,7 @@ public class PersonController {
     private List<Person> score(){
         List<Person> list = repo.findAll();
         Collections.sort(list);
-        return list;
+        return list.subList(50,list.size());
     }
 }
 
