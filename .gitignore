@@ -23,9 +23,9 @@ mvnw.cmd
 HELP.md
 target
 mvnw
-/resources/
-application.properties
-application-dev.properties
+
+*/resources/application.properties
+/resources/application-dev.properties
 msrl3_girl_contest
 
 ### NetBeans ###
