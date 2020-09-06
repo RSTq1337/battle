@@ -1,5 +1,6 @@
 package com.mog.rstq.norriv.summerProject.controller;
 
+import com.mog.rstq.norriv.summerProject.entity.BufferEntity;
 import com.mog.rstq.norriv.summerProject.entity.Person;
 import com.mog.rstq.norriv.summerProject.repository.PersonRepository;
 import org.springframework.beans.BeanUtils;
@@ -30,10 +31,10 @@ public class PersonController {
         return repo.findById(person).get();
     }
 
-    @PostMapping
-    private Person create(@RequestBody Person person){
-        return repo.save(person);
-    }
+//    @PostMapping
+//    private Person create(@RequestBody Person person){
+//        return repo.save(person);
+//    }
 
     @PutMapping("{id}")
     private Person update(
@@ -73,9 +74,9 @@ public class PersonController {
 //        buffer.ifPresent(repo::save);
 //    }
 
-    @PatchMapping("/{name}")
-    private void changeScoreByName(@PathVariable("name") String person){
-        Optional<Person> buffer = repo.findByFullName(person);
+    @PatchMapping
+    private void changeScoreByName(@RequestBody BufferEntity person){
+        Optional<Person> buffer = repo.findById(person.getPersonId());
         buffer.ifPresent(person1 -> person1.setScore(person1.getScore()+1));
         buffer.ifPresent(repo::save);
     }
