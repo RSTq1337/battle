@@ -19,22 +19,6 @@ public class PersonController {
     public PersonController(PersonRepository repo) {
         this.repo = repo;
     }
-//
-//    @GetMapping
-//    private List<Person> list(){
-//        return repo.findAll();
-//    }
-
-    @GetMapping("/repo/{id}")
-    private Person getOne(@PathVariable("id") String person){
-
-        return repo.findById(person).get();
-    }
-
-//    @PostMapping
-//    private Person create(@RequestBody Person person){
-//        return repo.save(person);
-//    }
 
     @PutMapping("{id}")
     private Person update(
@@ -74,12 +58,12 @@ public class PersonController {
 //        buffer.ifPresent(repo::save);
 //    }
 
-    @PatchMapping
-    private void changeScoreByName(@RequestBody BufferEntity person){
-        Optional<Person> buffer = repo.findById(person.getPersonId());
-        buffer.ifPresent(person1 -> person1.setScore(person1.getScore()+1));
-        buffer.ifPresent(repo::save);
-    }
+//    @PatchMapping
+//    private void changeScoreByName(@RequestBody BufferEntity person){
+//        Optional<Person> buffer = repo.findById(person.getPersonId());
+//        buffer.ifPresent(person1 -> person1.setScore(person1.getScore()+1));
+//        buffer.ifPresent(repo::save);
+//    }
 
     @GetMapping("/score")
     private List<Person> score(){
