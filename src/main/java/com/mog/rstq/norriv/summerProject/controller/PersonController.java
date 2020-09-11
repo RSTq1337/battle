@@ -58,7 +58,7 @@ public class PersonController {
 //        buffer.ifPresent(repo::save);
 //    }
 
-//    @PatchMapping
+//    @PatchMapping   //WORKS
 //    private void changeScoreByName(@RequestBody BufferEntity person){
 //        Optional<Person> buffer = repo.findById(person.getPersonId());
 //        buffer.ifPresent(person1 -> person1.setScore(person1.getScore()+1));
