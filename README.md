@@ -1,7 +1,11 @@
 # Photo battle
-It's backend part of our battle [application](https://3battle.netlify.app/)
+It's backend part of our battle [application](https://3battle.netlify.app/) 
 
 The bottom line is that we have a database with photos and links to girls' profiles. We randomly take two and the one chosen by the user gets +1 to score.
+
+
+# Attention! The Heroku application wakes up for about half a minute. Therefore, you need to wait at startup.
+
 
 # Some pictures
 
