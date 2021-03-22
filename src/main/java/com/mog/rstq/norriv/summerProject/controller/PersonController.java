@@ -51,20 +51,6 @@ public class PersonController {
          return twoPersons;
     }
 
-//    @PatchMapping("/{id}")
-//    private void changeScore(@PathVariable("id") String person){
-//        Optional<Person> buffer = repo.findById(person);
-//        buffer.ifPresent(person1 -> person1.setScore(person1.getScore()+1));
-//        buffer.ifPresent(repo::save);
-//    }
-
-//    @PatchMapping   //WORKS
-//    private void changeScoreByName(@RequestBody BufferEntity person){
-//        Optional<Person> buffer = repo.findById(person.getPersonId());
-//        buffer.ifPresent(person1 -> person1.setScore(person1.getScore()+1));
-//        buffer.ifPresent(repo::save);
-//    }
-
     @GetMapping("/score")
     private List<Person> score(){
         List<Person> list = repo.findAll();
